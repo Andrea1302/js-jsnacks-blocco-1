@@ -11,13 +11,15 @@ for ( let i = 0; i < 10 ; i++) {
     numeriInseriti = parseInt(prompt("Inserisci un numero"));
     numeri.push(numeriInseriti)
 }
-
-
 // Faccio la somma 
-let somma = numeri[0] + numeri[1] + numeri[2] + numeri[3] + numeri[4] + numeri[5] + numeri[6] + numeri[7] + numeri[8] + numeri[9];
+let somma = 0;
+for ( let i = 0 ; i < numeri.length ; i++){
+    
+    somma += numeri[i];
+    
+}
+console.log("la somma dei numeri inseriti è: ", somma);
 
-
-console.log("La somma dei tuoi numeri è :",somma);
 
 
 // Vedo i numeri inseriti 
