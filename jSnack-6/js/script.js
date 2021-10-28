@@ -9,16 +9,20 @@
 // 3. continuare così fino a quando arrNum.lenght è = 50
 
 // Array vuoto 
-const ArrNum = []
+const arrNum = [];
 
-let i = 0
-while ( ArrNum.length !== 10 ) {
-    let Numeri = Math.floor(Math.random()*19+ 1) ;
-    console.log(Numeri);
-    if ( Numeri !== ArrNum[i]){
-        ArrNum.push(Numeri);
+while ( arrNum.length !== 50 ) {
+    let numero = Math.floor(Math.random()*100+ 1) ;
+
+    let duplicato = false;
+    for(let i=0; i<arrNum.length; i++) {
+        if (arrNum[i] === numero) {
+            duplicato = true;
+        }
     }
-    i++;
+    if (!duplicato){
+        arrNum.push(numero);
+    }
 }
-console.log(ArrNum);
+console.log(arrNum);
 
