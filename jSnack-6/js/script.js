@@ -10,12 +10,13 @@
 
 // Array vuoto 
 const arrNum = [];
+console.log(arrNum.length);
 
 while ( arrNum.length !== 50 ) {
     let numero = Math.floor(Math.random()*100+ 1) ;
 
     let duplicato = false;
-    for(let i=0; i<arrNum.length; i++) {
+    for(let i=0; i < arrNum.length + 1; i++) {
         if (arrNum[i] === numero) {
             duplicato = true;
         }
